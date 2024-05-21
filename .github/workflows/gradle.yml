@@ -25,7 +25,7 @@ jobs:
     - name: build
       shell: cmd
       run: |
-        link.cmd && cd server && ./gradlew build
+        link.cmd && cd server && gradlew build
     - name: update
       uses: actions/upload-artifact@v4
       with:
