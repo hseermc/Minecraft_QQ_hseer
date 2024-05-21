@@ -1,0 +1,11 @@
+name: Minecraft_QQ
+main: coloryr.minecraft_qq.MBukkit
+author: Color_yr
+version: 3.0.4
+
+softdepend: [PlaceholderAPI]
+
+commands:
+  qq:
+    description: Minecraft_QQ的主要指令
+    usage: §4[Minecraft_QQ]§6/qq help来查看帮助
