@@ -22,11 +22,12 @@ jobs:
         distribution: 'temurin'
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3 # v3.1.0
-    - name: 用Gradle构建
+    - name: build
+      shell: cmd
       run: |
         link.cmd && cd server && ./gradlew build
-    - name: 更新Jar
-      uses: actions/upload-artifact@v2
+    - name: update
+      uses: actions/upload-artifact@v4
       with:
         name: "Minecraft_QQ"
-        path: build/libs
+        path: build/libs/
