@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq.core.bstats;
+package com.coloryr.minecraft_qq.core.bstats;
 
-import coloryr.minecraft_qq.core.bstats.charts.CustomChart;
-import coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
+import com.coloryr.minecraft_qq.core.bstats.charts.CustomChart;
+import com.coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;

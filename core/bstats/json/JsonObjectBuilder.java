@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.bstats.json;
+package com.coloryr.minecraft_qq.core.bstats.json;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

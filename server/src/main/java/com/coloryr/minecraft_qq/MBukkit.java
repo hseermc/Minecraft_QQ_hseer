@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq;
+package com.coloryr.minecraft_qq;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.side.bukkit.*;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.side.bukkit.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;

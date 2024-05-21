@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.core.config;
+package com.coloryr.minecraft_qq.core.config;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
 
 import java.util.ArrayList;
 import java.util.HashMap;

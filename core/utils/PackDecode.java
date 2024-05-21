@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.core.utils;
+package com.coloryr.minecraft_qq.core.utils;
 
-import coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
 import io.netty.buffer.ByteBuf;
 
 import java.nio.charset.StandardCharsets;

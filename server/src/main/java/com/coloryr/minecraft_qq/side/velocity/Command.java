@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.velocity;
 
-import coloryr.minecraft_qq.MVelocity;
-import coloryr.minecraft_qq.core.command.CommandEX;
+import com.coloryr.minecraft_qq.MVelocity;
+import com.coloryr.minecraft_qq.core.command.CommandEX;
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.command.SimpleCommand;
 import com.velocitypowered.api.proxy.Player;

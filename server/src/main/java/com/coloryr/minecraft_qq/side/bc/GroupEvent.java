@@ -1,13 +1,10 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bc;
 
-import coloryr.minecraft_qq.core.api.IGroupEvent;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import org.bukkit.event.Event;
-import org.bukkit.event.HandlerList;
-import org.jetbrains.annotations.NotNull;
+import com.coloryr.minecraft_qq.core.api.IGroupEvent;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
+import net.md_5.bungee.api.plugin.Event;
 
 public class GroupEvent extends Event implements IGroupEvent {
-    private static final HandlerList handlers = new HandlerList();
     private String group;
     private String message;
     private String player;
@@ -45,11 +42,5 @@ public class GroupEvent extends Event implements IGroupEvent {
     @Override
     public boolean isCommand() {
         return isCommand;
-    }
-
-    @NotNull
-    @Override
-    public HandlerList getHandlers() {
-        return handlers;
     }
 }

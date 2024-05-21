@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bukkit;
 
-import coloryr.minecraft_qq.core.api.ILogger;
+import com.coloryr.minecraft_qq.core.api.ILogger;
 
 import java.util.logging.Logger;
 

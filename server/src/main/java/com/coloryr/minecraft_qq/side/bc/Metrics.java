@@ -1,8 +1,8 @@
-package coloryr.minecraft_qq.side.bc;
+package com.coloryr.minecraft_qq.side.bc;
 
-import coloryr.minecraft_qq.core.bstats.MetricsBase;
-import coloryr.minecraft_qq.core.bstats.charts.CustomChart;
-import coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
+import com.coloryr.minecraft_qq.core.bstats.MetricsBase;
+import com.coloryr.minecraft_qq.core.bstats.charts.CustomChart;
+import com.coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;

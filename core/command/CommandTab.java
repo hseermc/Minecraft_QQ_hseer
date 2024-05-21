@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.command;
+package com.coloryr.minecraft_qq.core.command;
 
 import java.util.ArrayList;
 import java.util.List;

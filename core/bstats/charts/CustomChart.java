@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.core.bstats.charts;
+package com.coloryr.minecraft_qq.core.bstats.charts;
 
-import coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
+import com.coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
 
 import java.util.function.BiConsumer;
 

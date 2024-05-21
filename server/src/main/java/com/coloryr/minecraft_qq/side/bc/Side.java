@@ -1,26 +1,28 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.bc;
 
-import coloryr.minecraft_qq.MVelocity;
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.ISide;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import coloryr.minecraft_qq.core.ASide;
-import coloryr.minecraft_qq.core.utils.Logs;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
-import com.velocitypowered.api.command.CommandSource;
-import com.velocitypowered.api.proxy.Player;
-import com.velocitypowered.api.proxy.ProxyServer;
-import com.velocitypowered.api.proxy.server.RegisteredServer;
-import net.kyori.adventure.text.Component;
+import com.coloryr.minecraft_qq.MBC;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.ISide;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.ASide;
+import com.coloryr.minecraft_qq.core.utils.Logs;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
+import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.util.Collection;
 
 public class Side implements ISide {
+
     @Override
     public void send(Object sender, String message) {
-        CommandSource temp = (CommandSource) sender;
-        temp.sendMessage(Component.text(message));
+        CommandSender temp = (CommandSender) sender;
+        temp.sendMessage(new TextComponent(message));
     }
 
     @Override
@@ -28,12 +30,12 @@ public class Side implements ISide {
         try {
             if (Minecraft_QQ.config.System.Debug)
                 Minecraft_QQ.log.info("处理数据：" + readobj.message);
-            ProxyServer proxyserver = MVelocity.plugin.server;
+            ProxyServer proxyserver = ProxyServer.getInstance();
             try {
-                MVelocity.plugin.server.getScheduler().buildTask(MVelocity.plugin, () -> {
-                    GroupEvent eventVelocity = new GroupEvent(readobj);
-                    MVelocity.plugin.server.getEventManager().fireAndForget(eventVelocity);
-                }).schedule();
+                MBC.plugin.getProxy().getScheduler().runAsync(MBC.plugin, () -> {
+                    GroupEvent eventBC = new GroupEvent(readobj);
+                    MBC.plugin.getProxy().getPluginManager().callEvent(eventBC);
+                });
             } catch (Exception e) {
                 Minecraft_QQ.log.info("数据传输发生错误:");
                 e.printStackTrace();
@@ -45,28 +47,28 @@ public class Side implements ISide {
                             .replaceFirst(Minecraft_QQ.config.Placeholder.ServerName, Minecraft_QQ.config.ServerSet.ServerName)
                             .replaceFirst(Minecraft_QQ.config.Placeholder.Message, readobj.message)
                             .replaceFirst(Minecraft_QQ.config.Placeholder.Player, readobj.player);
-                    say = say.replaceAll("&", "§");
+                    say = ChatColor.translateAlternateColorCodes('&', say);
                     if (Minecraft_QQ.config.Logs.Group) {
                         Logs.logWrite("[Group]" + say);
                     }
-                    for (Player player1 : proxyserver.getAllPlayers()) {
-                        if (!Minecraft_QQ.config.Mute.contains(player1.getUsername()))
-                            player1.sendMessage(Component.text(say));
+                    for (ProxiedPlayer player1 : ProxyServer.getInstance().getPlayers()) {
+                        if (!Minecraft_QQ.config.Mute.contains(player1.getName()))
+                            player1.sendMessage(new TextComponent(say));
                     }
                 } else if (readobj.command.equalsIgnoreCase(Placeholder.online)) {
                     int allPlayerNumber = 0;
                     StringBuilder allServerPlayer = new StringBuilder();
                     String send = Minecraft_QQ.config.ServerSet.PlayerListMessage;
                     if (Minecraft_QQ.config.ServerSet.SendOneByOne) {
-                        for (final RegisteredServer serverinfo : proxyserver.getAllServers()) {
+                        for (final ServerInfo serverinfo : proxyserver.getServers().values()) {
                             String oneServerPlayer;
                             int oneServerNumber;
-                            final Collection<Player> oneServerPlayers = serverinfo.getPlayersConnected();
+                            final Collection<ProxiedPlayer> oneServerPlayers = serverinfo.getPlayers();
                             if (oneServerPlayers.size() == 0) {
                                 if (!Minecraft_QQ.config.ServerSet.HideEmptyServer) {
-                                    String serverName = Minecraft_QQ.config.Servers.get(serverinfo.getServerInfo().getName());
+                                    String serverName = Minecraft_QQ.config.Servers.get(serverinfo.getName());
                                     if (serverName == null || serverName.isEmpty()) {
-                                        serverName = serverinfo.getServerInfo().getName();
+                                        serverName = serverinfo.getName();
                                     }
                                     oneServerPlayer = Minecraft_QQ.config.ServerSet.SendOneByOneMessage
                                             .replaceAll(Minecraft_QQ.config.Placeholder.Server, serverName)
@@ -76,13 +78,13 @@ public class Side implements ISide {
                                 }
                             } else {
                                 oneServerNumber = oneServerPlayers.size();
-                                String serverName = Minecraft_QQ.config.Servers.get(serverinfo.getServerInfo().getName());
+                                String serverName = Minecraft_QQ.config.Servers.get(serverinfo.getName());
                                 if (serverName == null || serverName.isEmpty()) {
-                                    serverName = serverinfo.getServerInfo().getName();
+                                    serverName = serverinfo.getName();
                                 }
                                 StringBuilder players = new StringBuilder();
-                                for (Player player : oneServerPlayers) {
-                                    players.append(player.getUsername()).append(",");
+                                for (ProxiedPlayer player : oneServerPlayers) {
+                                    players.append(player.getName()).append(",");
                                 }
                                 String players1 = players.toString();
                                 oneServerPlayer = Minecraft_QQ.config.ServerSet.SendOneByOneMessage
@@ -101,14 +103,14 @@ public class Side implements ISide {
                                     .replaceAll(Minecraft_QQ.config.Placeholder.PlayerList, allServerPlayer.toString());
                         }
                     } else {
-                        final Collection<Player> players = proxyserver.getAllPlayers();
+                        final Collection<ProxiedPlayer> players = proxyserver.getPlayers();
                         if (players.size() == 0) {
                             send = send.replaceAll(Minecraft_QQ.config.Placeholder.PlayerNumber, "0")
                                     .replaceAll(Minecraft_QQ.config.Placeholder.PlayerList, "无");
                         } else {
                             StringBuilder temp = new StringBuilder();
-                            for (Player player : players) {
-                                temp.append(player.getUsername()).append(",");
+                            for (ProxiedPlayer player : players) {
+                                temp.append(player.getName()).append(",");
                             }
                             String players1 = temp.toString();
                             send = send.replaceAll(Minecraft_QQ.config.Placeholder.PlayerNumber, "" + players.size())
@@ -125,28 +127,27 @@ public class Side implements ISide {
                 }
             } else {
                 StringBuilder send_message;
-                Commander send = new Commander(readobj.player);
+                Commander send = new Commander();
+                send.player = readobj.player;
                 if (Minecraft_QQ.config.Logs.Group) {
                     Logs.logWrite("[Group]" + readobj.player + "执行命令" + readobj.command);
                 }
                 try {
-                    proxyserver.getCommandManager().executeAsync(send, readobj.command).get();
+                    proxyserver.getPluginManager().dispatchCommand(send, readobj.command);
                     Thread.sleep(Minecraft_QQ.config.ServerSet.CommandDelay);
-                    if (send.message.size() == 1) {
-                        send_message = new StringBuilder(send.message.get(0));
-                    } else if (send.message.size() > 1) {
-                        send_message = new StringBuilder(send.message.get(0));
-                        for (int i = 1; i < send.message.size(); i++) {
-                            send_message.append("\n");
-                            send_message.append(send.message.get(i));
-                        }
-                    } else
-                        send_message = new StringBuilder("已执行，指令无返回");
                 } catch (Exception e) {
-                    send_message = new StringBuilder("执行发生错误");
-                    Minecraft_QQ.log.warning("指令执行发生错误");
-                    e.printStackTrace();
+                    Minecraft_QQ.log.warning(e.toString());
                 }
+                if (send.message.size() == 1) {
+                    send_message = new StringBuilder(send.message.get(0));
+                } else if (send.message.size() > 1) {
+                    send_message = new StringBuilder(send.message.get(0));
+                    for (int i = 1; i < send.message.size(); i++) {
+                        send_message.append("\n");
+                        send_message.append(send.message.get(i));
+                    }
+                } else
+                    send_message = new StringBuilder("已执行，指令无返回");
                 SocketUtils.sendData(Placeholder.data, readobj.group,
                         "控制台", send_message.toString());
             }

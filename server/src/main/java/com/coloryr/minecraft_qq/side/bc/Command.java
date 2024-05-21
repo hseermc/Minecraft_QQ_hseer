@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq.side.bc;
+package com.coloryr.minecraft_qq.side.bc;
 
-import coloryr.minecraft_qq.core.command.CommandEX;
-import coloryr.minecraft_qq.core.command.CommandTab;
+import com.coloryr.minecraft_qq.core.command.CommandEX;
+import com.coloryr.minecraft_qq.core.command.CommandTab;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.plugin.TabExecutor;
 

@@ -1,5 +1,5 @@
 name: Minecraft_QQ
-main: coloryr.minecraft_qq.MBukkit
+main: com.coloryr.minecraft_qq.MBukkit
 author: Color_yr
 version: 3.0.4
 

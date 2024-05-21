@@ -1,8 +1,8 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bukkit;
 
-import coloryr.minecraft_qq.core.bstats.MetricsBase;
-import coloryr.minecraft_qq.core.bstats.charts.CustomChart;
-import coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
+import com.coloryr.minecraft_qq.core.bstats.MetricsBase;
+import com.coloryr.minecraft_qq.core.bstats.charts.CustomChart;
+import com.coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;

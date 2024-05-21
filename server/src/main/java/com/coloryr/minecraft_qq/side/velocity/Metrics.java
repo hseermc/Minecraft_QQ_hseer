@@ -1,9 +1,9 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.velocity;
 
-import coloryr.minecraft_qq.core.bstats.MetricsBase;
-import coloryr.minecraft_qq.core.bstats.charts.CustomChart;
-import coloryr.minecraft_qq.core.bstats.config.MetricsConfig;
-import coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
+import com.coloryr.minecraft_qq.core.bstats.MetricsBase;
+import com.coloryr.minecraft_qq.core.bstats.charts.CustomChart;
+import com.coloryr.minecraft_qq.core.bstats.config.MetricsConfig;
+import com.coloryr.minecraft_qq.core.bstats.json.JsonObjectBuilder;
 import com.google.inject.Inject;
 import com.velocitypowered.api.plugin.PluginContainer;
 import com.velocitypowered.api.plugin.PluginDescription;

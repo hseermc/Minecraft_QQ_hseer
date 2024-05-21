@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.core.utils;
+package com.coloryr.minecraft_qq.core.utils;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
 
 import java.io.File;
 import java.io.FileWriter;

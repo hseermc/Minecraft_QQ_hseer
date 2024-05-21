@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.velocity;
 
-import coloryr.minecraft_qq.MVelocity;
+import com.coloryr.minecraft_qq.MVelocity;
 import com.velocitypowered.api.network.ProtocolVersion;
 import com.velocitypowered.api.permission.Tristate;
 import com.velocitypowered.api.proxy.ConnectionRequestBuilder;

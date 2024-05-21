@@ -1,13 +1,13 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bukkit;
 
-import coloryr.minecraft_qq.MBukkit;
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.ISide;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import coloryr.minecraft_qq.core.ASide;
-import coloryr.minecraft_qq.core.utils.Logs;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
+import com.coloryr.minecraft_qq.MBukkit;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.ISide;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.ASide;
+import com.coloryr.minecraft_qq.core.utils.Logs;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

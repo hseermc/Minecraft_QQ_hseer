@@ -1,10 +1,9 @@
-package coloryr.minecraft_qq.side.bc;
+package com.coloryr.minecraft_qq.side.velocity;
 
-import coloryr.minecraft_qq.core.api.IGroupEvent;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import net.md_5.bungee.api.plugin.Event;
+import com.coloryr.minecraft_qq.core.api.IGroupEvent;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
 
-public class GroupEvent extends Event implements IGroupEvent {
+public class GroupEvent implements IGroupEvent {
     private String group;
     private String message;
     private String player;

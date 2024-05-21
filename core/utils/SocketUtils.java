@@ -1,9 +1,9 @@
-package coloryr.minecraft_qq.core.utils;
+package com.coloryr.minecraft_qq.core.utils;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import coloryr.minecraft_qq.core.json.SendObj;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.json.SendObj;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.config;
+package com.coloryr.minecraft_qq.core.config;
 
 public class LanguageOBJ {
     public String MessageOFF;

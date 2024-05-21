@@ -1,4 +1,4 @@
-rmdir "server/src/main/java/coloryr/minecraft_qq/core"
+rmdir "server/src/main/java/com/coloryr/minecraft_qq/core"
 
 rmdir "server/build"
 

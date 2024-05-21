@@ -1,9 +1,9 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.velocity;
 
-import coloryr.minecraft_qq.MVelocity;
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
+import com.coloryr.minecraft_qq.MVelocity;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.connection.DisconnectEvent;
 import com.velocitypowered.api.event.connection.PostLoginEvent;

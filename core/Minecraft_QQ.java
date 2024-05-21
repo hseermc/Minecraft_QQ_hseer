@@ -1,10 +1,10 @@
-package coloryr.minecraft_qq.core;
+package com.coloryr.minecraft_qq.core;
 
-import coloryr.minecraft_qq.core.api.ILogger;
-import coloryr.minecraft_qq.core.api.ISide;
-import coloryr.minecraft_qq.core.config.ConfigOBJ;
-import coloryr.minecraft_qq.core.utils.Logs;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
+import com.coloryr.minecraft_qq.core.api.ILogger;
+import com.coloryr.minecraft_qq.core.api.ISide;
+import com.coloryr.minecraft_qq.core.config.ConfigOBJ;
+import com.coloryr.minecraft_qq.core.utils.Logs;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
 import com.google.gson.Gson;
 
 import java.io.*;
@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
 public class Minecraft_QQ {
-    public final static String version = "3.0.3";
+    public final static String version = "3.0.4";
     public static ISide side;
     public static ConfigOBJ config;
     public static ILogger log;

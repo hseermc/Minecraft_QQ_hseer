@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.side.bc;
+package com.coloryr.minecraft_qq.side.bc;
 
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.BaseComponent;

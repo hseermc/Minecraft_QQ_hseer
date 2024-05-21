@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq;
+package com.coloryr.minecraft_qq;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.side.bc.*;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.side.bc.*;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 

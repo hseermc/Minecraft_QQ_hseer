@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bukkit;
 
 import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Bukkit;

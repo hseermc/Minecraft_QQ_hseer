@@ -1,6 +1,6 @@
-package coloryr.minecraft_qq.core.api;
+package com.coloryr.minecraft_qq.core.api;
 
-import coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
 
 public interface ISide {
     void message(ReadObj message);

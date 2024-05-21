@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.bstats.config;
+package com.coloryr.minecraft_qq.core.bstats.config;
 
 import java.io.*;
 import java.util.ArrayList;

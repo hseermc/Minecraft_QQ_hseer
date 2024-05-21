@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.api;
+package com.coloryr.minecraft_qq.core.api;
 
 public interface IGroupEvent {
     String getGroup();

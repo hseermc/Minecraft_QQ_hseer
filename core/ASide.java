@@ -1,11 +1,11 @@
-package coloryr.minecraft_qq.core;
+package com.coloryr.minecraft_qq.core;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.config.ConfigOBJ;
-import coloryr.minecraft_qq.core.json.ReadObj;
-import coloryr.minecraft_qq.core.utils.Logs;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.config.ConfigOBJ;
+import com.coloryr.minecraft_qq.core.json.ReadObj;
+import com.coloryr.minecraft_qq.core.utils.Logs;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
 import com.google.gson.Gson;
 
 public class ASide {

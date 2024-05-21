@@ -1,8 +1,8 @@
-package coloryr.minecraft_qq.core.command;
+package com.coloryr.minecraft_qq.core.command;
 
-import coloryr.minecraft_qq.core.Minecraft_QQ;
-import coloryr.minecraft_qq.core.api.Placeholder;
-import coloryr.minecraft_qq.core.utils.SocketUtils;
+import com.coloryr.minecraft_qq.core.Minecraft_QQ;
+import com.coloryr.minecraft_qq.core.api.Placeholder;
+import com.coloryr.minecraft_qq.core.utils.SocketUtils;
 
 public class CommandEX {
 

@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.json;
+package com.coloryr.minecraft_qq.core.json;
 
 public class ReadObj {
     public String group;

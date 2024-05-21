@@ -1,4 +1,4 @@
-package coloryr.minecraft_qq.core.api;
+package com.coloryr.minecraft_qq.core.api;
 
 public interface ILogger {
     void warning(String data);

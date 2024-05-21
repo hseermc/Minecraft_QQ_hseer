@@ -1,18 +1,19 @@
-package coloryr.minecraft_qq.side.velocity;
+package com.coloryr.minecraft_qq.side.bc;
 
-import coloryr.minecraft_qq.core.api.ILogger;
-import org.slf4j.Logger;
+import com.coloryr.minecraft_qq.core.api.ILogger;
+
+import java.util.logging.Logger;
 
 public class Log implements ILogger {
     private final Logger logger;
 
-    public Log(Logger logger) {
-        this.logger = logger;
+    public Log(Logger Logger) {
+        this.logger = Logger;
     }
 
     @Override
     public void warning(String data) {
-        logger.warn(data);
+        logger.warning(data);
     }
 
     @Override

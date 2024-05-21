@@ -1,7 +1,7 @@
-package coloryr.minecraft_qq.side.bukkit;
+package com.coloryr.minecraft_qq.side.bukkit;
 
-import coloryr.minecraft_qq.core.command.CommandEX;
-import coloryr.minecraft_qq.core.command.CommandTab;
+import com.coloryr.minecraft_qq.core.command.CommandEX;
+import com.coloryr.minecraft_qq.core.command.CommandTab;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
