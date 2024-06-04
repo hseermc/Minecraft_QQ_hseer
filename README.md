@@ -35,7 +35,7 @@
     "Message": "[%servername%]-%server%-%player%:%message%",
     "Say": "[%servername%][群消息]%player%:%message%",
     //对话模式 0 不启用对话 1 检测发送对话 2 始终发送对话
-    //模式1的时候，玩家只要在说的话前面加上 Check 就会把消息发送到群里
+    //模式1的时候，玩家只要在说的话前面加上 配置文件的Check中的值 就会把消息发送到群里
     "Mode": 1,
     //是否发送子服的人名单
     "SendOneByOne": true,
