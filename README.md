@@ -44,7 +44,7 @@
     "HideEmptyServer": true,
     "PlayerListMessage": "%servername%当前在线人数：%playernumber%，玩家列表：%playerlist%",
     "ServerOnlineMessage": "%servername%服务器在线",
-    //顶层模式
+    //顶层模式 开启后不参与对话，只会执行群内发送服务器指令
     "TopMode": false,
     "CommandDelay": 2000
   },
