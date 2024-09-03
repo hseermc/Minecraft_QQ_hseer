@@ -77,10 +77,6 @@ public class Minecraft_QQ {
                 Files.copy(this.getClass().getResourceAsStream("/config.json"), fileName.toPath());
             }
             Logs.init(file);
-            File wiki = new File(file, "wiki.txt");
-            if (!wiki.exists()) {
-                Files.copy(this.getClass().getResourceAsStream("/wiki.txt"), wiki.toPath());
-            }
             load();
         } catch (Exception e) {
             log.warning("§d[Minecraft_QQ]§c配置文件初始化错误");
