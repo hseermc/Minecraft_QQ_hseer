@@ -15,7 +15,7 @@ repositories {
         url 'https://hub.spigotmc.org/nexus/content/groups/public'
     }
     maven {
-        url = 'https://mvnrepository.com/artifact/me.clip/placeholderapi'
+        url = 'https://repo.glaremasters.me/repository/public/'
     }
     maven {
         name 'velocity'
@@ -36,3 +36,4 @@ dependencies {
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+
